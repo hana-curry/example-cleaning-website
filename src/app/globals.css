@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #232323;
+  --background-2: #BFD7BD;
+  --background: #F2F2F2;
+  --foreground-2: #0A4237;
+  --primary: #65AB2C;
+}
+
+@layer utilities {
+  .dot-background {
+    --dot-size: 1px;
+    --dot-space: 20px;
+    --dot-bg: var(--background);
+    --dot-color: var(--foreground);
+    background: linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center /
+      var(--dot-space) var(--dot-space), linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center /
+      var(--dot-space) var(--dot-space), var(--dot-color);
+  }
+}
