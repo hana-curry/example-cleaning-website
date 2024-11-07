@@ -5,7 +5,7 @@
 :root {
   --foreground: #232323;
   --background-2: #BFD7BD;
-  --background: #F2F2F2;
+  --background: #FBFBFB;
   --foreground-2: #0A4237;
   --primary: #65AB2C;
 }
@@ -20,4 +20,38 @@
       var(--dot-space) var(--dot-space), linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center /
       var(--dot-space) var(--dot-space), var(--dot-color);
   }
+}
+
+div#hamburger-line-1,
+div#hamburger-line-2,
+div#hamburger-line-3 {
+  transition: 200ms ease-in-out;
+}
+
+input#toggle-nav:checked ~ nav {
+  transform: translate(0%);
+}
+
+input#toggle-nav:checked ~ label > div#hamburger-line-1 {
+  transform: translateY(0.50rem) rotate(45deg);
+  color: var(--background);
+}
+
+input#toggle-nav:checked ~ label > div#hamburger-line-2 {
+  height: 0;
+  color: var(--background);
+}
+
+input#toggle-nav:checked ~ label > div#hamburger-line-3 {
+  transform: translateY(0.25rem) rotate(-45deg);
+  color: var(--background);
+}
+
+span.nav_a_span::before {
+  transition: 200ms;
+}
+
+a.nav_a:focus span::before,
+a.nav_a:hover span::before {
+  width: 100%;
 }
