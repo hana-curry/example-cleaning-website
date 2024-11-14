@@ -10,6 +10,17 @@
   --primary: #65AB2C;
 }
 
+*::selection {
+  background-color: var(--background-2);
+}
+
+.leaflet-control { z-index: 0 !important}
+.leaflet-pane { z-index: 0 !important}
+.leaflet-top, .leaflet-bottom {z-index: 0 !important}
+svg.leaflet-attribution-flag {display: none !important;}
+div.leaflet-control-attribution > a,
+div.leaflet-control-attribution > a {color: var(--primary)}
+
 @layer utilities {
   .dot-background {
     --dot-size: 1px;

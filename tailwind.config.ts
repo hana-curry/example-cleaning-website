@@ -15,6 +15,10 @@ const config: Config = {
         "foreground-2": "var(--foreground-2)",
         primary: "var(--primary)",
       },
+      backgroundImage: {
+        floatline: "url(/images/floatline.jpg)",
+        "floatline-mobile": "url(/images/floatline_mobile.jpg)"
+      }
     },
   },
   plugins: [],

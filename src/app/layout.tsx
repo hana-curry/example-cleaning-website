@@ -30,9 +30,10 @@ const nunito = localFont({
 export default function RootLayout({children}: {children: React.ReactNode}) {
 
   return (
-    <html lang="fr" className="h-full overflow-hidden">
-      <body className={`${nunito.variable} antialiased h-full dot-background flex justify-center`}>
-        <div className="w-full flex flex-col justify-between">
+    <html lang="fr" className="h-full overflow-x-hidden">
+      <body className={`${nunito.variable} antialiased h-full flex justify-center bg-background`}>
+        <div className="w-full flex flex-col justify-between items-center">
+          <div aria-hidden={true} className="pt-[40px]"></div>
           <Header />
           <main className=" max-w-[1080px] w-full">
           {children}
