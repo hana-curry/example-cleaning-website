@@ -14,6 +14,7 @@ const config: Config = {
         foreground: "var(--foreground)",
         "foreground-2": "var(--foreground-2)",
         primary: "var(--primary)",
+        wrong: "var(--wrong)"
       },
       backgroundImage: {
         floatline: "url(/images/floatline.jpg)",
