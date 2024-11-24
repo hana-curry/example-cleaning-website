@@ -15,6 +15,10 @@
   background-color: var(--background-2);
 }
 
+*:focus-visible {
+  outline: solid 2px var(--primary);
+}
+
 .leaflet-control { z-index: 0 !important}
 .leaflet-pane { z-index: 0 !important}
 .leaflet-top, .leaflet-bottom {z-index: 0 !important}
@@ -66,4 +70,24 @@ span.nav_a_span::before {
 a.nav_a:focus span::before,
 a.nav_a:hover span::before {
   width: 100%;
+}
+
+input.contact-input:invalid:focus {
+  outline: solid 2px var(--wrong);
+}
+
+input.contact-input:invalid + span.required-mark {
+  color: var(--wrong);
+}
+
+input.contact-input:valid:focus {
+  outline: solid 2px var(--primary);
+}
+
+label:has(+ input.contact-input:valid) > span.required-mark {
+  color: var(--primary);
+}
+
+label:has(+ input.contact-input:invalid) > span.required-mark {
+  color: var(--wrong);
 }
