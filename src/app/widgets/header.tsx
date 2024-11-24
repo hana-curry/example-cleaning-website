@@ -21,7 +21,7 @@ export default function Header({}) {
     return <header className=" w-full flex justify-center fixed z-30 top-0">
         <div className=" max-w-[1080px] h-fit bg-background w-full flex flex-row justify-between items-center px-8 py-2">
             <h1><a href="/">
-            <img className=" w-20" src="/images/logo.svg" alt="Colle's cleaning" />
+            <img width={80} height={40} className=" w-20" src="/images/logo.svg" alt="Colle's cleaning" />
             </a></h1>
             <input className=" hidden" type="checkbox" id="toggle-nav" aria-label="toggle navigation" aria-controls="toggle-nav" />
             <label className=" sm:hidden z-50 block h-8" id="hamburger-label" aria-hidden="true" htmlFor="toggle-nav">

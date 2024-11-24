@@ -11,7 +11,7 @@ const infos = [
     {img: "/images/tva.svg", alt: "Un cercle avec un 'i' à l'intérieur", text: "TVA 0000.000.000"}
 ].map((element, id) => {
     return <li className=" flex gap-3" key={element.text+String(id)}>
-        <img className="w-4" src={element.img} alt={element.alt} />
+        <img width={16} height={16} className="w-4" src={element.img} alt={element.alt} />
         <span>{element.text}</span>
     </li>
 })

@@ -3,6 +3,11 @@
 import { usePathname } from "next/navigation"
 import PrimaryLink from "./components/primaryLink"
 import SecondaryLink from "./components/secondaryLink"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    robots: "noindex, nofollow",
+}
 
 export default function Error({error, reset}: {
     error: Error & { digest?: string},

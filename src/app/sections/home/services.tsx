@@ -8,7 +8,7 @@ const cards: React.ReactNode[] = [
 ].map((element, id) => {
     return <li className=" snap-center pt-2" key={element.anchor+String(id)}>
         <Link className=" relative focus:bottom-2 hover:bottom-2" href={`/expertise#${element.anchor}`}>
-            <img className=" min-w-36" src={element.url} alt={element.alt} />
+            <img loading="lazy" width={180} height={216} className=" min-w-36" src={element.url} alt={element.alt} />
         </Link>
     </li>
 })

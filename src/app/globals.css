@@ -84,10 +84,12 @@ input.contact-input:valid:focus {
   outline: solid 2px var(--primary);
 }
 
-label:has(+ input.contact-input:valid) > span.required-mark {
+label:has(+ input.contact-input:valid) > span.required-mark,
+input.contact-input:checked ~ span.required-mark {
   color: var(--primary);
 }
 
-label:has(+ input.contact-input:invalid) > span.required-mark {
+label:has(+ input.contact-input:invalid) > span.required-mark,
+input.contact-input:not(:checked) ~ span.required-mark {
   color: var(--wrong);
 }

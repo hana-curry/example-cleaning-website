@@ -1,3 +1,9 @@
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    description: "Chez Colle's Cleaning Services, nous réalisons des grand nettoyages, l'entretien de bureaux, le nettoyage d'entreprise, les interventions après sinistre et bien d'autres. Faites confiance à notre expertise pour un environnement impeccable."
+}
+
 type service = {
     name: string,
     description: string
@@ -56,7 +62,7 @@ export default function Expertise({}) {
             </ul>
         </section>
         <section className=" flex flex-col-reverse sm:flex-row items-center md:justify-around gap-12 w-[80%]">
-            <img className=" w-40" src="/images/services.jpg" alt="" />
+            <img className=" w-40" src="/images/services.webp" alt="" />
             <div className="p-6 relative flex flex-col gap-6 w-full max-w-[550px] before:absolute before:rounded-lg before:inset-0 before:bg-foreground before:-z-10 before:opacity-5">
                 <h3 className=" text-2xl">Autres services</h3>
                 <div className="flex flex-col md:flex-row md:justify-between">

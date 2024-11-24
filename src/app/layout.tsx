@@ -19,7 +19,17 @@ export const metadata: Metadata = {
       url: "/images/dark.png",
       href: "/images/dark.png"
     }
-  ]
+  ],
+  openGraph: {
+    type: "website",
+    url: "https://example.colle.dev",
+    title: "Colle's Cleaning Services",
+    siteName: "Colle's Cleaning Services",
+    description: "Chez Colle's Cleaning Services, nous proposons des services de nettoyage de haute qualité, adaptés aux besoins de chaque client. Grâce à notre équipe souriante et professionnelle.",
+    locale: "fr_BE",
+  },
+  authors: [{name: "Colle", url: "https://colle.dev"}],
+  keywords: ["nettoyage", "service", "entretien"],
 }
 
 const nunito = localFont({

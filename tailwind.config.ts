@@ -17,8 +17,8 @@ const config: Config = {
         wrong: "var(--wrong)"
       },
       backgroundImage: {
-        floatline: "url(/images/floatline.jpg)",
-        "floatline-mobile": "url(/images/floatline_mobile.jpg)"
+        floatline: "url(/images/floatline.webp)",
+        "floatline-mobile": "url(/images/floatline_mobile.webp)"
       }
     },
   },
