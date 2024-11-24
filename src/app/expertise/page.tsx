@@ -12,9 +12,9 @@ type service = {
 
 const services: service[] = [
     {name: "Grands nettoyages", id: "gn", description: "Avec notre expertise et nos techniques professionnelles, nous assurons un Grand Nettoyage rapide et efficace, pour des résultats impeccables."},
-    {name: "Netoyage de bureau", id: "office", description: "Nous proposons des services de nettoyage de bureaux personnalisés, alliant professionnalisme, discrétion et efficacité pour un espace de travail impeccable."},  
-    {name: "Netoyage d’industrie", id: "industry", description: "Nous offrons des services de nettoyage pour les lieux industriels, garantissant propreté et sécurité grâce à notre expertise et à des méthodes adaptées."},
-    {name: "Netoyage apres sinistres", id: "sinister", description: "Nous réalisons des nettoyages après sinistres avec rapidité et expertise, pour restaurer la propreté des lieux affectés."}
+    {name: "Nettoyage de bureau", id: "office", description: "Nous proposons des services de nettoyage de bureaux personnalisés, alliant professionnalisme, discrétion et efficacité pour un espace de travail impeccable."},  
+    {name: "Nettoyage d’industrie", id: "industry", description: "Nous offrons des services de nettoyage pour les lieux industriels, garantissant propreté et sécurité grâce à notre expertise et à des méthodes adaptées."},
+    {name: "Nettoyage apres sinistres", id: "sinister", description: "Nous réalisons des nettoyages après sinistres avec rapidité et expertise, pour restaurer la propreté des lieux affectés."}
 
 ]
 
@@ -33,12 +33,12 @@ const services_li = services.map((service: service, key: number) => {
 
 const other_services: string[] = [
     "Lavage de vitres",
-    "Netoyage de sols",
+    "Nettoyage de sols",
     "Handyman",
-    "Netoyage de magasin",
+    "Nettoyage de magasin",
     "Fournitures et consomables",
-    "Netoyage des tapis",
-    "Netoyage de debut chantier",
+    "Nettoyage des tapis",
+    "Nettoyage de debut chantier",
     "Autres..."
 ]
 
