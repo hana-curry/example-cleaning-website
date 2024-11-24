@@ -6,14 +6,15 @@ export const metadata: Metadata = {
 
 type service = {
     name: string,
-    description: string
+    description: string,
+    id: string
 }
 
 const services: service[] = [
-    {name: "Grands nettoyages", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."},
-    {name: "Netoyage de bureau", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."},  
-    {name: "Netoyage apres sinistres", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."},  
-    {name: "Netoyage d’industrie", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."}   
+    {name: "Grands nettoyages", id: "gn", description: "Avec notre expertise et nos techniques professionnelles, nous assurons un Grand Nettoyage rapide et efficace, pour des résultats impeccables."},
+    {name: "Netoyage de bureau", id: "office", description: "Nous proposons des services de nettoyage de bureaux personnalisés, alliant professionnalisme, discrétion et efficacité pour un espace de travail impeccable."},  
+    {name: "Netoyage d’industrie", id: "industry", description: "Nous offrons des services de nettoyage pour les lieux industriels, garantissant propreté et sécurité grâce à notre expertise et à des méthodes adaptées."},
+    {name: "Netoyage apres sinistres", id: "sinister", description: "Nous réalisons des nettoyages après sinistres avec rapidité et expertise, pour restaurer la propreté des lieux affectés."}
 
 ]
 
@@ -24,7 +25,7 @@ const left_li_h3_class =  " sm:before:mr-4 sm:before:inline-block sm:before:w-3 
 
 const services_li = services.map((service: service, key: number) => {
     return <li className={" flex flex-col gap-2 text-center sm:w-[75%] md:w-[60%] " + (key % 2 == 0 ? left_li_class : right_li_class)} key={service.name + String(key)}>
-        <h3 className={" text-foreground-2 text-xl font-semibold " + (key % 2 == 0 ? left_li_h3_class : right_li_h3_class)} >{service.name}</h3>
+        <h3 id={service.id} className={" text-foreground-2 text-xl font-semibold scroll-mt-20 " + (key % 2 == 0 ? left_li_h3_class : right_li_h3_class)} >{service.name}</h3>
         <p>{service.description}</p>
     </li>
 })

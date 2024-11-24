@@ -8,7 +8,7 @@ export default function ExpertiseSection({}) {
                 <img width={404} src="/images/home_expertise.jpg" className=" relative w-full" alt="Une main qui tient un pulvérisateur d'eau dans une pièce vide en bois claire" />
             </div>
             <div className=" flex flex-col gap-6">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Avec 25 ans d'expérience, nous connaissons parfaitement le terrain du nettoyage. Notre expertise assure des services adaptés, un professionnalisme exemplaire et des résultats impeccables.</p>
                 <PrimaryLink href="/expertise">En savoir plus</PrimaryLink>
             </div>
         </div>

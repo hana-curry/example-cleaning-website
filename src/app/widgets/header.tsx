@@ -4,7 +4,6 @@ export default function Header({}) {
 
     const links: link[] = [
         {url: "/", title: "Accueil"},
-        {url: "/quote", title: "Devis"},
         {url: "/expertise", title: "Savoir-faire"},
         {url: "/contact", title: "Contact"}
     ]

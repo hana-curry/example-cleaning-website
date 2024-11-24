@@ -1,10 +1,10 @@
 import Link from "next/link"
 
 const cards: React.ReactNode[] = [
-    {url: "/images/gn_card.jpg", alt: "Grands Netoyages", anchor: "gn"},
-    {url: "/images/office_card.jpg", alt: "Nettoyage Bureau", anchor: "office"},
-    {url: "/images/industry_card.jpg", alt: "Nettoyage D'industries", anchor: "industry"},
-    {url: "/images/sinister_card.jpg", alt: "Nettoyage Après Sinistres", anchor: "sinister"}
+    {url: "/images/gn_card.webp", alt: "Grands Netoyages", anchor: "gn"},
+    {url: "/images/office_card.webp", alt: "Nettoyage Bureau", anchor: "office"},
+    {url: "/images/industry_card.webp", alt: "Nettoyage D'industries", anchor: "industry"},
+    {url: "/images/sinister_card.webp", alt: "Nettoyage Après Sinistres", anchor: "sinister"}
 ].map((element, id) => {
     return <li className=" snap-center pt-2" key={element.anchor+String(id)}>
         <Link className=" relative focus:bottom-2 hover:bottom-2" href={`/expertise#${element.anchor}`}>
@@ -21,7 +21,7 @@ export default function ServicesSection({}) {
             <ul className=" grid grid-flow-col gap-6 overflow-x-auto pb-4 snap-x">
                 {cards}
             </ul>
-            <span>et <Link className=" text-primary underline" href="/quote">bien plus encore...</Link></span>
+            <span>et <Link className=" text-primary underline" href="/expertise">bien plus encore...</Link></span>
         </div>
     </section>
 }

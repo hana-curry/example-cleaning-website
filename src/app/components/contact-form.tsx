@@ -36,14 +36,14 @@ export default function ContactForm() {
                 Nom
                 <span className="required-mark">*</span>
             </label>
-            <input ref={lastnameRef} className={inputStyling} type="text" name="lastname" id="lastname-contact" placeholder="Jean" required />
+            <input ref={lastnameRef} className={inputStyling} type="text" name="lastname" id="lastname-contact" placeholder="Paul" required />
         </div>
         <div className={inputDivStyling}>
             <label className={labelStyling} htmlFor="firstname-contact">
                 Prénom
                 <span className="required-mark">*</span>
             </label>
-            <input ref={firstnameRef} className={inputStyling} type="text" name="firstname" id="firstname-contact" placeholder="Paul" required />
+            <input ref={firstnameRef} className={inputStyling} type="text" name="firstname" id="firstname-contact" placeholder="Jean" required />
         </div>
         <div className={inputDivStyling + "col-span-2"}>
             <label className={labelStyling} htmlFor="email-contact">

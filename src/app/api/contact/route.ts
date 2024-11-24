@@ -1,9 +1,8 @@
 import { Resend } from "resend"
 
-
-console.log(process.env.RESEND_KEY)
 const resend = new Resend(process.env.RESEND_KEY)
 const to = process.env.RESEND_EMAIL as string
+const from = "info@example.colle.dev"
 
 async function send(firstname: string, lastname: string, email: string, content: string) {
     if (typeof firstname != "string") throw new TypeError()
@@ -12,7 +11,7 @@ async function send(firstname: string, lastname: string, email: string, content:
     if (typeof content != "string") throw new TypeError()
 
     await resend.emails.send({
-        from: `${firstname} ${lastname} <onboarding@resend.dev>`,
+        from: `${firstname} ${lastname} <${from}>`,
         to: to,
         subject: `Formulaire de contact`,
         html: `Nom: ${firstname}<br>Prenom: ${lastname}<br>Email: ${email}<p>${content}</p>`
@@ -22,7 +21,6 @@ async function send(firstname: string, lastname: string, email: string, content:
 export async function POST(request: Request) {
     const body = await request.json()
     const { firstname, lastname, email, content } = body
-    console.log(firstname, lastname, email, content)
     if (typeof firstname == "string" && typeof lastname == "string" && typeof email == "string") {
         console.log(firstname, lastname, email, content)
         try {
