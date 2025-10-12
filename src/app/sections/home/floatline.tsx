@@ -8,10 +8,10 @@ export default function loatlineSection({}) {
                 <span className=" font-bold">Colle's</span>
                 <span className=" z-10 font-semibold w-fit relative before:block before:absolute before:inset-0 before:top-[40%] before:-translate-x-2 before:translate-y-0.5 before:rounded-lg before:-z-10 before:bg-background-2">Cleaning Services</span>
             </h2>
-            <p className=" text-lg max-w-[500px]">Entreprise de nettoyage professionnelle, souriante, avec 25 ans d'expérience. Services impeccables et personnalisés.</p>
+            <p className=" text-lg max-w-[500px]">Entreprise de nettoyage professionnelle, souriante, avec 25 ans d'expérience. Services impeccables et personnalisés. (entreprise fictive)</p>
             <div className=" flex flex-col sm:flex-row gap-4">
-                <PrimaryLink href="/contact">Contact</PrimaryLink>
-                <SecondaryLink href="/expertise">Savoir-faire</SecondaryLink>
+                <PrimaryLink href="/quote">Faire un devis</PrimaryLink>
+                <SecondaryLink href="/contact">Contact</SecondaryLink>
             </div>
         </div>
     </section>

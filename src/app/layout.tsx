@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     locale: "fr_BE",
   },
   authors: [{name: "Colle", url: "https://colle.dev"}],
-  keywords: ["nettoyage", "service", "entretien"],
+  keywords: ["nettoyage", "service", "surface"],
 }
 
 const nunito = localFont({

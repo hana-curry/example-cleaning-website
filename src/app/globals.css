@@ -93,3 +93,13 @@ label:has(+ input.contact-input:invalid) > span.required-mark,
 input.contact-input:not(:checked) ~ span.required-mark {
   color: var(--wrong);
 }
+
+label.quote-checkbox-label:has(input:checked) {
+  outline: 1px solid var(--primary);
+  outline-offset: -1px;
+}
+
+label.quote-checkbox-label:has(input:focus-visible) {
+  outline: 2px solid #365F54;
+  outline-offset: -2px;
+}

@@ -2,7 +2,7 @@ const h3_class = " text-lg font-bold pt-4"
 const ul_class = " list-disc pl-4"
 
 export default function Rgbd() {
-    return <section className=" py-20 flex flex-col gap-2">
+    return <section className=" py-20 flex flex-col gap-2 px-6 sm:px-12">
         <h2 className=" text-foreground-2 font-bold text-xl">Politique de Confidentialité (RGPD)</h2>
         <h3 className={h3_class}>Collecte des données :</h3>
         <p>Lorsque vous utilisez notre formulaire de contact, nous collectons les informations suivantes :</p>
@@ -11,6 +11,18 @@ export default function Rgbd() {
             <li>Prénom</li>
             <li>Email</li>
             <li>Message</li>
+        </ul>
+        <p>Lorsque vous utilisez notre formulaire de devis, nous collectons les informations suivantes :</p>
+        <ul className={ul_class}>
+            <li>Nom</li>
+            <li>Prénom</li>
+            <li>Email</li>
+            <li>Adresse</li>
+            <li>Téléphone</li>
+            <li>Type de services que vous/votre entreprise souhaiterais</li>
+            <li>Nom de votre Société/Entreprise</li>
+            <li>Domaine d'activite de votre Société/Entreprise</li>
+            <li>Message (commentaire/demandes)</li>
         </ul>
         <h3 className={h3_class}>Finalité de la collecte :</h3>
         <p>Ces informations sont utilisées uniquement pour :</p>

@@ -10,7 +10,7 @@ export default function Map({className}: {className: string}) {
 
     return ( 
         // Make sure you set the height and width of the map container otherwise the map won't show
-        <MapContainer className={className} center={[latitude, longitude]} zoom={100} ref={mapRef} >
+        <MapContainer className={className} center={[latitude, longitude]} zoom={10} ref={mapRef} >
             <TileLayer
             attribution='<a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a>'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

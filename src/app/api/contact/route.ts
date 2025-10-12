@@ -14,7 +14,7 @@ async function send(firstname: string, lastname: string, email: string, content:
         from: `${firstname} ${lastname} <${from}>`,
         to: to,
         subject: `Formulaire de contact`,
-        html: `Nom: ${firstname}<br>Prenom: ${lastname}<br>Email: ${email}<p>${content}</p>`
+        html: `Nom: ${lastname}<br>Prénom: ${firstname}<br>Email: ${email}<br><br>${content}`
     })
 }
 

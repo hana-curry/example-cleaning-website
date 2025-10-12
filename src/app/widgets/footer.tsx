@@ -8,9 +8,6 @@ export default function Footer({}) {
             <span className="text-center">
             © Copyright Hana Colle 2024
             </span>
-            <span className=" opacity-60">
-                Créé par <a className="underline" href="https://colle.dev">Colle</a>
-            </span>
         </div>
     </footer>
 }

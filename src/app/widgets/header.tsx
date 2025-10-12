@@ -4,8 +4,9 @@ export default function Header({}) {
 
     const links: link[] = [
         {url: "/", title: "Accueil"},
+        {url: "/quote", title: "Devis"},
         {url: "/expertise", title: "Savoir-faire"},
-        {url: "/contact", title: "Contact"}
+        {url: "/contact", title: "Contact"},
     ]
 
     const linksComponents: JSX.Element[] = links.map((link, id) => {
