@@ -1,7 +1,7 @@
 import localFont from "next/font/local"
-import Header from "./widgets/header"
-import Footer from "./widgets/footer"
+import Footer from "../components/footer/footer"
 import { Metadata } from "next"
+import Navigation from "@/components/navigation/navigation"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -44,7 +44,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       <body className={`${nunito.variable} antialiased h-full flex justify-center bg-background`}>
         <div className="w-full flex flex-col justify-between items-center">
           <div aria-hidden={true} className="pt-[40px]"></div>
-          <Header />
+          <Navigation />
           <main className=" max-w-[1080px] w-full">
           {children}
           </main>

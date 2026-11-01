@@ -1,5 +1,5 @@
-import PrimaryLink from "@/app/components/primaryLink";
-import SecondaryLink from "@/app/components/secondaryLink";
+import PrimaryLink from "@/components/primaryLink";
+import SecondaryLink from "@/components/secondaryLink";
 
 export default function loatlineSection({}) {
     return <section className=" flex justify-center bg-floatline-mobile md:bg-floatline h-[500px] sm:h-[400px] lg:rounded-md bg-cover bg-center pt-8 md:pt-0 md:items-center">

@@ -1,7 +1,7 @@
 "use client"
 import { FormEvent, useCallback, useRef, useState } from "react"
 import FormButton from "./formButton"
-import fieldSetToArray from "../libs/fieldsetToArray"
+import fieldSetToArray from "../utils/fieldsetToArray"
 import { useRouter } from "next/navigation"
 
 const inputStyling = " contact-input bg-[#D4DDDA] text-[#365F54] placeholder-[#839C95] rounded-lg px-3 py-1.5"
@@ -16,16 +16,16 @@ type service = {
 }
 
 const services: service[] = [
-    {title: "Nettoyage de vitres", icon: "window", alt: "Icone de vitre"},
-    {title: "Nettoyage d'industries", icon: "industry", alt: "Icone de vitre"},
-    {title: "Handyman", icon: "handyman", alt: "Icone d'un individus de face avec trois engrenages au dessu de lui."},
-    {title: "Nettoy. après sinistres", icon: "sinister", alt: "Icone de brique qui explose"},
-    {title: "Nettoyage de bureaux", icon: "desk", alt: "Icone de bureau"},
-    {title: "Nettoyage de magasins", icon: "window", alt: "Icone de magasin"},
-    {title: "Grand Nettoyages", icon: "gn", alt: "Icone d'un balais"},
-    {title: "Nettoyage de sols", icon: "floor", alt: "Icone d'un carrelage de sol"},
-    {title: "Nettoy. début/fin chantier", icon: "start-end", alt: "Icone d'une lune dans un soleil"},
-    {title: "fournitures / consomables", icon: "consumable", alt: "Icone d'un spray"},
+    {title: "Nettoyage de vitres", icon: "window", alt: "Icône de vitre"},
+    {title: "Nettoyage d'industries", icon: "industry", alt: "Icône de vitre"},
+    {title: "Handyman", icon: "handyman", alt: "Icône d'un individu de face avec trois engrenages au-dessus de lui."},
+    {title: "Nettoy. après sinistres", icon: "sinister", alt: "Icône de brique qui explose"},
+    {title: "Nettoyage de bureaux", icon: "desk", alt: "Icône de bureau"},
+    {title: "Nettoyage de magasins", icon: "window", alt: "Icône de magasin"},
+    {title: "Grands nettoyages", icon: "gn", alt: "Icône d'un balai"},
+    {title: "Nettoyage de sols", icon: "floor", alt: "Icône d'un carrelage de sol"},
+    {title: "Nettoy. début/fin chantier", icon: "start-end", alt: "Icône d'une lune dans un soleil"},
+    {title: "Fournitures / consommables", icon: "consumable", alt: "Icône d'un spray"},
     {title: "Autre...", icon: "", alt: ""},
 ]
 
@@ -177,7 +177,7 @@ export default function QuoteFrom() {
                         </div>
                         <div className={inputDivStyling}>
                             <label className={labelStyling} htmlFor="activity-quote">
-                                Domaine d'activite
+                                Domaine d'activité
                                 <span className="required-mark">*</span>
                             </label>
                             <input ref={activityRef} className={inputStyling} type="text" name="activity" id="activity-quote" placeholder="Nettoyage" required />
@@ -199,8 +199,8 @@ export default function QuoteFrom() {
                         </textarea>
                         <div className=" pt-4">
                             <input className=" contact-input appearance-none w-3 h-3 outline-offset-2 mr-2 bg-[#D4DDDA] outline-[#D4DDDA] outline-2 outline rounded-sm duration-150 checked:bg-primary checked:outline-primary" type="checkbox" id="rgpd-contact" required />
-                            <label htmlFor="rgpd-contact">J'ai lu.e et j'accepte la </label>
-                            <a className=" text-primary underline" target="_blank" href="/rgpd">Chartte RGPD</a>
+                            <label htmlFor="rgpd-contact">J'ai lu et j'accepte la </label>
+                            <a className=" text-primary underline" target="_blank" href="/rgpd">politique de confidentialité</a>
                             <span className="required-mark">*</span>
                         </div>
                     </div>

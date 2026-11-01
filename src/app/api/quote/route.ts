@@ -1,8 +1,9 @@
 import { Resend } from "resend"
+import TextToHtml from "@/utils/TextToHtml"
 
 const resend = new Resend(process.env.RESEND_KEY)
-const to = process.env.RESEND_EMAIL as string
-const from = "info@example.colle.dev"
+const to = process.env.ADMIN_EMAIL as string
+const from = process.env.RESEND_EMAIL as string
 
 type bodyParam = {
     lastname: string,
@@ -21,23 +22,30 @@ async function send(
     societyName: string, phone: string, services: string[], activity: string,
     comment: string
 ) {
-    await resend.emails.send({
-        from: `${firstname} ${lastname} <${from}>`,
+    const details = `
+        Informations <br>
+        - Nom: ${TextToHtml.safeConvert(lastname)} <br>
+        - Prénom: ${TextToHtml.safeConvert(firstname)} <br>
+        - Email: ${TextToHtml.safeConvert(email)} <br>
+        - Téléphone: ${TextToHtml.safeConvert(phone)} <br>
+        - Adresse: ${TextToHtml.safeConvert(address)} <br><br>
+        Entreprise / Société <br>
+        - Entreprise: ${TextToHtml.safeConvert(societyName)} <br>
+        - Secteur d'activité: ${TextToHtml.safeConvert(activity)} <br>
+        ${services.length > 0 ? "- Services demandés: "+services.map(service => TextToHtml.safeConvert(String(service))).join(", ")+"<br>" : ""} <br>
+        ${comment != "" ? "Commentaire <br>"+TextToHtml.safeConvert(comment) : ""}`
+
+    const res = await resend.batch.send([{
+        from: `Colle Example Website <${from}>`,
         to: to,
         subject: `Demande de devis`,
-        html: `
-        Informations <br>
-        - Nom: ${lastname} <br>
-        - Prénom: ${firstname} <br>
-        - Email: ${email} <br>
-        - Téléphone: ${phone} <br>
-        - Addresse: ${address} <br><br>
-        Entreprise / Société <br>
-        - Entreprise: ${societyName} <br>
-        - Secteur d'activité: ${activity} <br>
-        ${services.length > 0 ? "- Services demandés: "+services.join(", ")+"<br>" : ""} <br>
-        ${comment != "" ? "Commentaire <br>"+comment+"" : ""}`
-    })
+        html: details
+    },{
+        from: `Colle Example Website <${from}>`,
+        to: email,
+        subject: `Confirmation d'envoi de la demande de devis`,
+        html: `Votre demande de devis a bien été envoyée!`
+    }])
 }
 
 export async function POST(request: Request) {
@@ -55,7 +63,7 @@ export async function POST(request: Request) {
         services instanceof Array
     ) {
         try {
-            send(lastname, firstname, email, address, societyName, phone, services, activity, comment)
+            await send(lastname, firstname, email, address, societyName, phone, services, activity, comment)
         } catch(err) {
             console.error(err)
             return new Response("Server side error", {

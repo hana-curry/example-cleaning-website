@@ -1,10 +1,10 @@
 import Link from "next/link"
 
 const cards: React.ReactNode[] = [
-    {url: "/images/gn_card.webp", alt: "Grands Netoyages", anchor: "gn"},
-    {url: "/images/office_card.webp", alt: "Nettoyage Bureau", anchor: "office"},
-    {url: "/images/industry_card.webp", alt: "Nettoyage D'industries", anchor: "industry"},
-    {url: "/images/sinister_card.webp", alt: "Nettoyage Après Sinistres", anchor: "sinister"}
+    {url: "/images/gn_card.webp", alt: "Grands nettoyages", anchor: "gn"},
+    {url: "/images/office_card.webp", alt: "Nettoyage de bureaux", anchor: "office"},
+    {url: "/images/industry_card.webp", alt: "Nettoyage d'industries", anchor: "industry"},
+    {url: "/images/sinister_card.webp", alt: "Nettoyage après sinistres", anchor: "sinister"}
 ].map((element, id) => {
     return <li className=" snap-center pt-2" key={element.anchor+String(id)}>
         <Link className=" relative focus:bottom-2 hover:bottom-2" href={`/expertise#${element.anchor}`}>

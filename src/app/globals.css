@@ -1,22 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --foreground: #232323;
-  --background-2: #BFD7BD;
-  --background: #FBFBFB;
-  --foreground-2: #0A4237;
-  --primary: #65AB2C;
-  --wrong: #E46666;
+@theme {
+  --color-background: #FBFBFB;
+  --color-background-2: #BFD7BD;
+  --color-foreground: #232323;
+  --color-foreground-2: #0A4237;
+  --color-primary: #65AB2C;
+  --color-wrong: #E46666;
+  --background-image-floatline: url(/images/floatline.webp);
+  --background-image-floatline-mobile: url(/images/floatline_mobile.webp);
 }
 
 *::selection {
-  background-color: var(--background-2);
+  background-color: var(--color-background-2);
 }
 
 *:focus-visible {
-  outline: solid 2px var(--primary);
+  outline: solid 2px var(--color-primary);
 }
 
 .leaflet-control { z-index: 0 !important}
@@ -24,13 +24,13 @@
 .leaflet-top, .leaflet-bottom {z-index: 0 !important}
 svg.leaflet-attribution-flag {display: none !important;}
 div.leaflet-control-attribution > a,
-div.leaflet-control-attribution > a {color: var(--primary)}
+div.leaflet-control-attribution > a {color: var(--color-primary)}
 
 @layer utilities {
   .dot-background {
     --dot-size: 1px;
     --dot-space: 20px;
-    --dot-bg: var(--background);
+    --dot-bg: var(--color-background);
     --dot-color: #8a8a8a;
     background: linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center /
       var(--dot-space) var(--dot-space), linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center /
@@ -38,64 +38,30 @@ div.leaflet-control-attribution > a {color: var(--primary)}
   }
 }
 
-div#hamburger-line-1,
-div#hamburger-line-2,
-div#hamburger-line-3 {
-  transition: 200ms ease-in-out;
-}
-
-input#toggle-nav:checked ~ nav {
-  transform: translate(0%);
-}
-
-input#toggle-nav:checked ~ label > div#hamburger-line-1 {
-  transform: translateY(0.50rem) rotate(45deg);
-  color: var(--background);
-}
-
-input#toggle-nav:checked ~ label > div#hamburger-line-2 {
-  height: 0;
-  color: var(--background);
-}
-
-input#toggle-nav:checked ~ label > div#hamburger-line-3 {
-  transform: translateY(0.25rem) rotate(-45deg);
-  color: var(--background);
-}
-
-span.nav_a_span::before {
-  transition: 200ms;
-}
-
-a.nav_a:focus span::before,
-a.nav_a:hover span::before {
-  width: 100%;
-}
-
 input.contact-input:invalid:focus {
-  outline: solid 2px var(--wrong);
+  outline: solid 2px var(--color-wrong);
 }
 
 input.contact-input:invalid + span.required-mark {
-  color: var(--wrong);
+  color: var(--color-wrong);
 }
 
 input.contact-input:valid:focus {
-  outline: solid 2px var(--primary);
+  outline: solid 2px var(--color-primary);
 }
 
 label:has(+ input.contact-input:valid) > span.required-mark,
 input.contact-input:checked ~ span.required-mark {
-  color: var(--primary);
+  color: var(--color-primary);
 }
 
 label:has(+ input.contact-input:invalid) > span.required-mark,
 input.contact-input:not(:checked) ~ span.required-mark {
-  color: var(--wrong);
+  color: var(--color-wrong);
 }
 
 label.quote-checkbox-label:has(input:checked) {
-  outline: 1px solid var(--primary);
+  outline: 1px solid var(--color-primary);
   outline-offset: -1px;
 }
 

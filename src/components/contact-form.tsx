@@ -68,8 +68,8 @@ export default function ContactForm() {
     <div className=" flex flex-col gap-4 sm:flex-row justify-between w-full items-end sm:items-center">
         <div>
             <input className=" contact-input appearance-none w-3 h-3 outline-offset-2 mr-2 bg-[#D4DDDA] outline-[#D4DDDA] outline-2 outline rounded-sm duration-150 checked:bg-primary checked:outline-primary" type="checkbox" id="rgpd-contact" required />
-            <label htmlFor="rgpd-contact">J'ai lu.e et j'accepte la </label>
-            <a className=" text-primary underline" target="_blank" href="/rgpd">Chartte RGPD</a>
+            <label htmlFor="rgpd-contact">J'ai lu et j'accepte la </label>
+            <a className=" text-primary underline" target="_blank" href="/rgpd">politique de confidentialité</a>
             <span className="required-mark">*</span>
         </div>
         <input
